@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: seesdvk
+  name: wdatofte
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "seesdvk"
+  - name: "wdatofte"
     port: 8080
   selector:
-    app: seesdvk
+    app: wdatofte
