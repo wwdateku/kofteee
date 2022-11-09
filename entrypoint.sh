@@ -7,22 +7,22 @@ fi
 echo ${VER}
 
 if [[ -z "${Vless_Path}" ]]; then
-  Vless_Path="/96b0e69b-4416-4887-9b25-4aa7da6f0cc5-vless"
+  Vless_Path="/d9c91160-633a-4e42-9e78-abdbf930c3d2-vless"
 fi
 echo ${Vless_Path}
 
 if [[ -z "${Vless_UUID}" ]]; then
-  Vless_UUID="96b0e69b-4416-4887-9b25-4aa7da6f0cc5"
+  Vless_UUID="d9c91160-633a-4e42-9e78-abdbf930c3d2"
 fi
 echo ${Vless_UUID}
 
 if [[ -z "${Vmess_Path}" ]]; then
-  Vmess_Path="/98d9c4cc-566c-4a3e-bab4-0ab5dfb0651c-vmess"
+  Vmess_Path="/629c4616-2d94-4b6c-8a69-0286ef146662-vmess"
 fi
 echo ${Vmess_Path}
 
 if [[ -z "${Vmess_UUID}" ]]; then
-  Vmess_UUID="98d9c4cc-566c-4a3e-bab4-0ab5dfb0651c"
+  Vmess_UUID="d9c91160-633a-4e42-9e78-abdbf930c3d2"
 fi
 echo ${Vmess_UUID}
 
@@ -39,7 +39,7 @@ fi
 
 mkdir /xraybin
 cd /xraybin
-RAY_URL="https://github.com/surprisederto/oktoknh/raw/main/xhrkhr.zip"
+RAY_URL="https://github.com/XTLS/Xray-core/releases/download/${VER}/Xray-linux-64.zip"
 echo ${RAY_URL}
 wget --no-check-certificate ${RAY_URL}
 unzip Xray-linux-64.zip
