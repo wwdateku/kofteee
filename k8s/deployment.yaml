@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seesdvk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seesdvk
+  template:
+    metadata:
+      labels:
+        app: seesdvk
+    spec:
+      containers:
+      - image: okteto.dev/seesdvk:latest
+        name: seesdvk
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "mirror.umd.edu"
+        - name: Vless_UUID
+          value: "96b0e69b-4416-4887-9b25-4aa7da6f0cc5"
+        - name: Vless_Path
+          value: "/96b0e69b-4416-4887-9b25-4aa7da6f0cc5-vless"
+        - name: Vmess_UUID
+          value: "98d9c4cc-566c-4a3e-bab4-0ab5dfb0651c"
+        - name: Vmess_Path
+          value: "/98d9c4cc-566c-4a3e-bab4-0ab5dfb0651c-vmess"
+        - name: Share_Path
+          value: "$Share_Path"
