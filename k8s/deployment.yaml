@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: seesdvk
+  name: wdatofte
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: seesdvk
+      app: wdatofte
   template:
     metadata:
       labels:
-        app: seesdvk
+        app: wdatofte
     spec:
       containers:
-      - image: okteto.dev/seesdvk:latest
-        name: seesdvk
+      - image: okteto.dev/wdatofte:latest
+        name: wdatofte
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "mirror.umd.edu"
         - name: Vless_UUID
-          value: "96b0e69b-4416-4887-9b25-4aa7da6f0cc5"
+          value: "d9c91160-633a-4e42-9e78-abdbf930c3d2"
         - name: Vless_Path
-          value: "/96b0e69b-4416-4887-9b25-4aa7da6f0cc5-vless"
+          value: "/d9c91160-633a-4e42-9e78-abdbf930c3d2-vless"
         - name: Vmess_UUID
-          value: "98d9c4cc-566c-4a3e-bab4-0ab5dfb0651c"
+          value: "d9c91160-633a-4e42-9e78-abdbf930c3d2"
         - name: Vmess_Path
-          value: "/98d9c4cc-566c-4a3e-bab4-0ab5dfb0651c-vmess"
+          value: "/629c4616-2d94-4b6c-8a69-0286ef146662-vmess"
         - name: Share_Path
           value: "$Share_Path"
